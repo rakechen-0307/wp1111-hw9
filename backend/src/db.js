@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 export default {
     connect: () => {
          mongoose
-            .connect("mongodb+srv://rakechen0307:92chen0307R@wp1111-hw6.k6z7ocx.mongodb.net/?retryWrites=true&w=majority", {
+            .connect("mongodb://mongo:GlkGmHkud2GMB27NWTHE@containers-us-west-22.railway.app:6934", {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
             })
