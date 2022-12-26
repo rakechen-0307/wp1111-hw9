@@ -54,7 +54,6 @@ const Body = () => {
   };
 
   const handleAdd = async () => {
-    console.log(api)
     const {
       data: { message, card },
     } = await api.post('/card', {
