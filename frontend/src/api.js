@@ -1,7 +1,5 @@
 import axios from "axios";
 
-console.log(process.env.NODE_ENV)
-
 const API_ROOT =
   process.env.NODE_ENV === "production"
     ? "/"
