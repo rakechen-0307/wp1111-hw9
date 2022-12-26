@@ -4,10 +4,13 @@ import db from './db';
 import path from "path";
 import express from "express";
 
+db.connect();
+
 const app = express();
 
 if (process.env.NODE_ENV === "production") {
   const __dirname = path.resolve();
+  console.log(__dirname)
   app.use(express.static(path.join(__dirname, "../frontend", "build")));
   app.get("/*", function (req, res) {
     res.sendFile(path.join(__dirname, "../frontend", "build", "index.html"));
@@ -17,8 +20,6 @@ if (process.env.NODE_ENV === "production") {
 if (process.env.NODE_ENV === "development") {
 	app.use(cors());
 }
-
-db.connect();
 
 // define routes
 app.use('/', routes);
