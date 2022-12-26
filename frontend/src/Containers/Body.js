@@ -10,7 +10,7 @@ import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 
 import { useStyles } from '../hooks';
-import api from '../api';
+import { api } from '../api';
 import { useScoreCard } from '../hooks/useScoreCard';
 
 const Wrapper = styled.section`
@@ -54,6 +54,7 @@ const Body = () => {
   };
 
   const handleAdd = async () => {
+    console.log(api)
     const {
       data: { message, card },
     } = await api.post('/card', {
