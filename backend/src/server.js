@@ -27,7 +27,7 @@ app.use(cors());
 app.use('/', routes);
 
 // define server
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 6533;
 app.get('/', (req, res) => {
     res.send('Hello, World!');
 });
