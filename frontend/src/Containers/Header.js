@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-import { api } from '../api';
+import api from '../api';
 import { useScoreCard } from '../hooks/useScoreCard';
 
 const Wrapper = styled.section`
