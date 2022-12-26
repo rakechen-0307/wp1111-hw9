@@ -14,16 +14,11 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-/*
 if (process.env.NODE_ENV === "development") {
 	app.use(cors());
 }
-*/
 
 db.connect();
-
-// init middleware
-app.use(cors());
 
 // define routes
 app.use('/', routes);
